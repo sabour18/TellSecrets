@@ -1,0 +1,58 @@
+
+body {
+  background-color: rgb(230, 242, 255);
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.jumbo{
+  background-color: rgb(230, 242, 255);
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  padding: 25px 20px;
+  margin: 15px 12px;
+  background-color:#81D9FF;
+  border: 1px solid black;
+  border-radius: 16px 6px 16px 6px;
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.31);
+}
+
+.btn-login{
+  background-color:#81D9FF;
+}
+.btn-login:hover{
+  background-color:#5db3d8;
+}
+
+.btn-secret{
+  margin-top: 10px;
+}
+
+.btn-secret:hover{
+  color: black;
+  background-color: white;
+}
+
+.secret-card{
+}
+
+i{
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.error{
+  color: red;
+  font-size: 0.8rem;
+}
+
+#userError{
+  display: none;
+}
