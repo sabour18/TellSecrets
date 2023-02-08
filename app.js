@@ -30,7 +30,7 @@ app.use(passport.session());
 
 // Starts mongodb server
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://127.0.0.1:27017/userDB");
+mongoose.connect("mongodb+srv://admin:admin@cluster0.o432ssq.mongodb.net/secretsDB");
 
 // Scehema for what a user looks like
 const userSchema = new mongoose.Schema({
@@ -45,7 +45,8 @@ const secretSchema = new mongoose.Schema({
 userSchema.plugin(passportLocalMongoose);
 
 // encrypt the password
-userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"]});
+const secret = "THISISOURLITTLESECRET";
+userSchema.plugin(encrypt, { secret: secret, encryptedFields: ["password"]});
 
 // Collection for the Schema
 const User = new mongoose.model("User", userSchema);
@@ -65,6 +66,13 @@ app.get("/", function(req, res){
 
 app.get("/login", function(req, res){
     
+    if(req.isAuthenticated()){
+        var id = req.user.id;
+        console.log(id);
+    }else{
+        
+    }
+
     res.render("login");
 });
 
@@ -149,6 +157,8 @@ app.post("/submit", function(req, res){
     
     res.redirect("/secrets");
 });
+
+
 
 
 

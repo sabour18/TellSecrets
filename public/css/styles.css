@@ -8,9 +8,15 @@ body {
     text-align: center;
 }
 
+i{
+  margin: 50%;
+}
+
 .jumbo{
   background-color: rgb(230, 242, 255);
+  padding: 0;
 }
+
 
 .secret-text {
   text-align: center;
@@ -26,13 +32,21 @@ body {
 
 .btn-login{
   background-color:#81D9FF;
+  width: auto;
+  padding: 10px 10%;
 }
 .btn-login:hover{
   background-color:#5db3d8;
 }
 
+.btn-register{
+  width: auto;
+  padding: 10px 10%;
+}
+
 .btn-secret{
-  margin-top: 10px;
+  margin-top: 5%;
+  width: 67%;
 }
 
 .btn-secret:hover{
@@ -56,3 +70,4 @@ i{
 #userError{
   display: none;
 }
+
